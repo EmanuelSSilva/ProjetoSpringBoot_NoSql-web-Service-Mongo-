@@ -1,0 +1,141 @@
+// ...existing code...
+# -------------------------
+# Sistema operacional
+# -------------------------
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+Icon?
+Desktop.ini
+
+# -------------------------
+# Logs e arquivos temporários
+# -------------------------
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# temp
+tmp/
+temp/
+*.tmp
+*.swp
+*~.nib
+
+# -------------------------
+# Credenciais / env
+# -------------------------
+.env
+.env.local
+.env.*.local
+*.secret
+secrets.yml
+
+# -------------------------
+# IDEs / editores
+# -------------------------
+.vscode/
+.metadata/
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# -------------------------
+# Linguagens / geradores
+# -------------------------
+# Node
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pytest_cache/
+venv/
+ENV/
+env/
+.Python
+
+# Java / Maven / Gradle
+target/
+build/
+out/
+!.mvn/wrapper/maven-wrapper.jar  # se preferir commitar o wrapper, remova o ! para ignorar
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+*.class
+*.jar
+*.war
+*.ear
+
+# Gradle
+.gradle/
+build/
+
+# Kotlin/IntelliJ
+/out/
+*.kotlin_module
+
+# -------------------------
+# Containers / Docker
+# -------------------------
+docker-compose.override.yml
+.env.docker
+
+# -------------------------
+# Sistemas de banco / dumps
+# -------------------------
+*.sql
+*.sqlite
+*.sqlite3
+*.dump
+*.bson
+*.archive
+
+# -------------------------
+# CI / sistema de build
+# -------------------------
+# Jetbrains TeamCity
+.teamcity/
+
+# GitHub Actions
+.github/workflows/ # manter se o workflow for parte do repositório; remover se quiser ignorar
+
+# -------------------------
+# Arquivos sensíveis / binários
+# -------------------------
+*.pem
+*.key
+*.pfx
+*.crt
+*.der
+*.pub
+
+# -------------------------
+# Outros
+# -------------------------
+coverage/
+reports/
+.vagrant/
+.idea_modules/
+# fim
+// ...existing code...
