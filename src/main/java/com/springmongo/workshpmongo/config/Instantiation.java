@@ -1,12 +1,16 @@
 package com.springmongo.workshpmongo.config;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.TimeZone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
+import com.springmongo.workshpmongo.domain.Post;
 import com.springmongo.workshpmongo.domain.User;
+import com.springmongo.workshpmongo.repository.PostRepository;
 import com.springmongo.workshpmongo.repository.UserRepository;
 
 
@@ -16,17 +20,29 @@ public class Instantiation implements CommandLineRunner{
 	@Autowired
 	private UserRepository userRepository;
 	
+	@Autowired
+	private PostRepository postRepositroy;
+	
 	@Override
 	public void run(String... args) throws Exception {
 		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+		
+		
 		userRepository.deleteAll();
+		postRepositroy.deleteAll();
 		
 		User maria = new User(null, "Maria Brown", "maria@gmail.com");
 		User alex = new User(null, "Alex Green", "alex@gmail.com");
 		User bob = new User(null, "Bob Grey", "bob@gmail.com");
 		
-		userRepository.saveAll(Arrays.asList(maria, alex, bob));
+		Post post1 = new Post(null, sdf.parse("21/03/2018") , "Vai com Deus", "O bom é se despedir e deixar saudades", maria);
+		Post post2 = new Post(null, sdf.parse("07/06/2022") , "Bom dia", "O bom é acordar bem!", maria);
 		
+		
+		userRepository.saveAll(Arrays.asList(maria, alex, bob));
+		postRepositroy.saveAll(Arrays.asList(post1, post2));
 		
 	}
 
